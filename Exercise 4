@@ -1,0 +1,36 @@
+		import java.util.Random;
+		import java.util.Scanner;
+
+public class AgeGuess 
+{
+	public static void main(String[] args) 
+	{
+		
+		Scanner scan = new Scanner(System.in);
+		
+		// User prompts for Name and Age
+			System.out.print ("Enter a name: "); 
+			String name = scan.nextLine(); 
+     
+     		System.out.println("Generating age for "+ name);
+     		int age = new Random().nextInt(100);
+     
+     		System.out.print ("Guess an age: "); 
+     		int ageGuess =  scan.nextInt();
+     		System.out.println ("");
+     		
+     	// Users input
+     		System.out.println ("Name: "+ name);
+     		System.out.println ("Age you guessed: "+ ageGuess);
+     		
+     	if(ageGuess != age)
+    		System.out.print("You guessed wrong! ");
+    	if(ageGuess < age)
+    		System.out.print("older ");
+    	if(ageGuess > age)
+    		System.out.print("younger ");
+
+     		System.out.println ("");
+     		System.out.println("Actual age is: " + age);
+     }
+}
